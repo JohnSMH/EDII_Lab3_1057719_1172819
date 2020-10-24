@@ -125,7 +125,7 @@ namespace Lab1.Controllers
                 Datos obtener = new Datos();
                 obtener.Razóndecompresión = (Convert.ToDouble(fileWrite.Length) / Convert.ToDouble(fileRead.Length));
                 obtener.Factordecompresión = (Convert.ToDouble(fileRead.Length) / Convert.ToDouble(fileWrite.Length));
-                obtener.Porcentajedereducción = (Convert.ToDouble(fileRead.Length) / Convert.ToDouble(fileWrite.Length)) * 100;
+                obtener.Porcentajedereducción = (Convert.ToDouble(fileWrite.Length) / Convert.ToDouble(fileRead.Length)) * 100;
                 obtener.Nombredelarchivooriginal = (file.FileName);
                 obtener.Nombreyrutadelarchivocomprimido = (name + ".huff");
                 Data.Instance.archivos.Add(obtener);
